@@ -1,60 +1,73 @@
 @import url('http://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Spartan', sans-serif;
 }
 
-h1{
+h1 {
     font-size: 50px;
     line-height: 64px;
     color: #222;
 }
 
-h2{
+h2 {
     font-size: 46px;
     line-height: 54px;
     color: #222;
 }
 
-h4{
+h4 {
     font-size: 20px;
     color: #222;
 }
 
-h6{
+h6 {
     font-weight: 700;
     font-size: 12px;
 }
 
-p{
+p {
     font-size: 16px;
     color: #111714;
     margin: 15px 0 20px 0;
 }
 
-.section-p1{
+.section-p1 {
     margin: 40px 80px;
 }
 
-.section-m1{
+.section-m1 {
     margin: 40px 0;
 }
 
-body{
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+body {
     width: 100%;
 }
 
-.logo{
+.logo {
     width: 200px;
     height: 100px;
     max-width: 200px;
 }
 
 /*Header Start */
-#header{
+#header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,20 +80,20 @@ body{
     left: 0;
 }
 
-#navbar{
+#navbar {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#navbar li{
+#navbar li {
     list-style: none;
     padding: 0px 20px;
-    position: relative; 
+    position: relative;
     /*Coloquei esta posição relativa neste pai por causa do underline nos itens da lista */
 }
 
-#navbar li a{
+#navbar li a {
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
@@ -89,29 +102,30 @@ body{
 }
 
 #navbar li a:hover {
-   color: #0ab7ae;  /*Alterar cor */
+    color: #0ab7ae;
+    /*Alterar cor */
 }
 
 #navbar li a:hover,
 #navbar li a.active {
     color: #0ab7ae;
- }
+}
 
- #navbar li a.active::after,
- #navbar li a:hover::after {
-   content: "";
-   width: 30%;
-   height: 2px;
-   background-color:  #0ab7ae;
-   position: absolute;
-   bottom: -4px;
-   left: 20px;
- }
- 
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #0ab7ae;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
 
- /* Home Page */
- #hero{
-    background-image: url("Imagens/Capa/Maria3.jpeg");
+
+/* Home Page */
+#hero {
+    background-image: url("/Imagens/Capa/FotoDeCapa.jpg");
     height: 82vh;
     width: 100%;
     background-size: cover;
@@ -121,23 +135,23 @@ body{
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
- } 
+}
 
- #hero h4{
+#hero h4 {
     padding-bottom: 15px;
- }
+}
 
- 
- #hero h1{
+
+#hero h1 {
     color: #088178;
- }
+}
 
- #hero p{
+#hero p {
     font-weight: bold;
- }
+}
 
 
- #hero button{
+#hero button {
     background-image: url(Imagens/Botão/button.png);
     background-color: transparent;
     color: #088178;
@@ -147,4 +161,196 @@ body{
     cursor: pointer;
     font-weight: 700;
     font-size: 15px;
- }
+}
+
+/* Feature Section */
+
+
+.feature-img-1 {
+    width: 120px;
+}
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0px;
+}
+
+#feature .fe-box:hover {
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+
+#feature .fe-box img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#feature .fe-box h6 {
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+
+#feature .fe-box:nth-child(2) h6 {
+    background-color: #cdebbc;
+}
+
+#feature .fe-box:nth-child(3) h6 {
+    background-color: #d1e8f2;
+}
+
+#feature .fe-box:nth-child(4) h6 {
+    background-color: #cdd4f8;
+}
+
+#feature .fe-box:nth-child(5) h6 {
+    background-color: #f6dbf6;
+}
+
+#product-1 {
+    text-align: center;
+}
+
+#product-1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#product-1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgb(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#product-1 .pro:hover {
+    box-shadow: 20px 20px 30px rgb(0, 0, 0, 0.06);
+}
+
+#product-1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product-1 .pro .description {
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product-1 .pro .description h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product-1 .pro .description i {
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#product-1 .pro .description h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#product-1 .pro .cart {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    /*Este botão do carrinho não está a aparecer */
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(Imagens/Banner/Banner3.jpg);
+    width: 100%;
+    height: 32vh;
+    background-size: cover;
+    background-image: center;
+}
+
+#banner h4 {
+    color: #fff;
+    font-size: 16px;
+}
+
+#banner h2 {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+#banner h2 span {
+    color: rgb(76, 183, 233);
+}
+
+#banner button:hover{
+    background-color: #086181;
+    color: #fff;
+}
+
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    background-image: url(Imagens/Banner/Banner2.jpg);
+    min-width: 580px;
+    height: 40vh;
+    background-size: cover;
+    background-image: center;
+    padding: 30px;
+}
+
+#sm-banner h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#sm-banner h2{
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+}
